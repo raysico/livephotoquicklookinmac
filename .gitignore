@@ -5,3 +5,7 @@ research/
 node_modules/
 dist/
 .env
+build/
+DerivedData/
+xcuserdata/
+.DS_Store
