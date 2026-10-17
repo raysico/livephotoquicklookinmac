@@ -1,0 +1,7 @@
+locallog.md
+test/
+playground/
+research/
+node_modules/
+dist/
+.env
