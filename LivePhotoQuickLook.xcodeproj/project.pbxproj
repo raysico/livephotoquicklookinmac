@@ -13,6 +13,8 @@
 		A80000000000000000000004 /* LivpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70000000000000000000006 /* LivpParser.swift */; };
 		A80000000000000000000005 /* libarchive.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7000000000000000000000A /* libarchive.tbd */; };
 		A80000000000000000000006 /* PreviewExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A7000000000000000000000C /* PreviewExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A90000000000000000000005 /* LivpImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90000000000000000000001 /* LivpImporter.swift */; };
+		A90000000000000000000006 /* LivpImporter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A90000000000000000000004 /* LivpImporter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +24,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = A30000000000000000000002;
 			remoteInfo = PreviewExtension;
+		};
+		A9000000000000000000000D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A90000000000000000000008;
+			remoteInfo = LivpImporter;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -33,6 +42,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				A80000000000000000000006 /* PreviewExtension.appex in Embed App Extensions */,
+				A90000000000000000000006 /* LivpImporter.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +62,10 @@
 		A7000000000000000000000A /* libarchive.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libarchive.tbd; path = usr/lib/libarchive.tbd; sourceTree = SDKROOT; };
 		A7000000000000000000000B /* LivePhotoQuickLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivePhotoQuickLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7000000000000000000000C /* PreviewExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PreviewExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90000000000000000000001 /* LivpImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivpImporter.swift; sourceTree = "<group>"; };
+		A90000000000000000000002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A90000000000000000000003 /* LivpImporter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LivpImporter.entitlements; sourceTree = "<group>"; };
+		A90000000000000000000004 /* LivpImporter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LivpImporter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +84,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9000000000000000000000A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +99,7 @@
 			children = (
 				A10000000000000000000004 /* LivePhotoQuickLook */,
 				A10000000000000000000005 /* PreviewExtension */,
+				A90000000000000000000007 /* LivpImporter */,
 				A10000000000000000000006 /* Frameworks */,
 				A10000000000000000000003 /* Products */,
 			);
@@ -88,6 +110,7 @@
 			children = (
 				A7000000000000000000000B /* LivePhotoQuickLook.app */,
 				A7000000000000000000000C /* PreviewExtension.appex */,
+				A90000000000000000000004 /* LivpImporter.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +146,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A90000000000000000000007 /* LivpImporter */ = {
+			isa = PBXGroup;
+			children = (
+				A90000000000000000000001 /* LivpImporter.swift */,
+				A90000000000000000000002 /* Info.plist */,
+				A90000000000000000000003 /* LivpImporter.entitlements */,
+			);
+			path = LivpImporter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +172,7 @@
 			);
 			dependencies = (
 				A50000000000000000000001 /* PBXTargetDependency */,
+				A9000000000000000000000C /* PBXTargetDependency */,
 			);
 			name = LivePhotoQuickLook;
 			productName = LivePhotoQuickLook;
@@ -162,6 +196,23 @@
 			productReference = A7000000000000000000000C /* PreviewExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		A90000000000000000000008 /* LivpImporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90000000000000000000010 /* Build configuration list for PBXNativeTarget "LivpImporter" */;
+			buildPhases = (
+				A90000000000000000000009 /* Sources */,
+				A9000000000000000000000A /* Frameworks */,
+				A9000000000000000000000B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LivpImporter;
+			productName = LivpImporter;
+			productReference = A90000000000000000000004 /* LivpImporter.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -176,6 +227,9 @@
 						CreatedOnToolsVersion = 15.0;
 					};
 					A30000000000000000000002 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					A90000000000000000000008 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
@@ -195,6 +249,7 @@
 			targets = (
 				A30000000000000000000001 /* LivePhotoQuickLook */,
 				A30000000000000000000002 /* PreviewExtension */,
+				A90000000000000000000008 /* LivpImporter */,
 			);
 		};
 /* End PBXProject section */
@@ -208,6 +263,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A40000000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9000000000000000000000B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -235,6 +297,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A90000000000000000000009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90000000000000000000005 /* LivpImporter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -242,6 +312,11 @@
 			isa = PBXTargetDependency;
 			target = A30000000000000000000002 /* PreviewExtension */;
 			targetProxy = A50000000000000000000002 /* PBXContainerItemProxy */;
+		};
+		A9000000000000000000000C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A90000000000000000000008 /* LivpImporter */;
+			targetProxy = A9000000000000000000000D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -291,9 +366,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = LivePhotoQuickLook/LivePhotoQuickLook.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99L56AA4BS;
 				INFOPLIST_FILE = LivePhotoQuickLook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +379,7 @@
 				MARKETING_VERSION = 0.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoxiudimdim.LivePhotoQuickLook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -309,9 +387,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = LivePhotoQuickLook/LivePhotoQuickLook.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99L56AA4BS;
 				INFOPLIST_FILE = LivePhotoQuickLook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,6 +400,7 @@
 				MARKETING_VERSION = 0.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoxiudimdim.LivePhotoQuickLook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -328,8 +409,10 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PreviewExtension/PreviewExtension.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99L56AA4BS;
 				INFOPLIST_FILE = PreviewExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -339,6 +422,7 @@
 				MARKETING_VERSION = 0.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoxiudimdim.LivePhotoQuickLook.PreviewExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "PreviewExtension/PreviewExtension-Bridging-Header.h";
 			};
@@ -349,8 +433,10 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PreviewExtension/PreviewExtension.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99L56AA4BS;
 				INFOPLIST_FILE = PreviewExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,8 +446,57 @@
 				MARKETING_VERSION = 0.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoxiudimdim.LivePhotoQuickLook.PreviewExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "PreviewExtension/PreviewExtension-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		A9000000000000000000000E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = LivpImporter/LivpImporter.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99L56AA4BS;
+				INFOPLIST_FILE = LivpImporter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 0.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hoxiudimdim.LivePhotoQuickLook.LivpImporter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A9000000000000000000000F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = LivpImporter/LivpImporter.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99L56AA4BS;
+				INFOPLIST_FILE = LivpImporter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 0.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hoxiudimdim.LivePhotoQuickLook.LivpImporter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -391,6 +526,15 @@
 			buildConfigurations = (
 				A60000000000000000000004 /* Debug */,
 				A60000000000000000000005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90000000000000000000010 /* Build configuration list for PBXNativeTarget "LivpImporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9000000000000000000000E /* Debug */,
+				A9000000000000000000000F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
