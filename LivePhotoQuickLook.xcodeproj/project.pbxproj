@@ -15,6 +15,11 @@
 		A80000000000000000000006 /* PreviewExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A7000000000000000000000C /* PreviewExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A90000000000000000000005 /* LivpImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90000000000000000000001 /* LivpImporter.swift */; };
 		A90000000000000000000006 /* LivpImporter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A90000000000000000000004 /* LivpImporter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A90000000000000000000014 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90000000000000000000011 /* ContentViewController.swift */; };
+		A90000000000000000000015 /* LivePhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90000000000000000000012 /* LivePhotoItem.swift */; };
+		A90000000000000000000016 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90000000000000000000013 /* SidebarViewController.swift */; };
+		A90000000000000000000017 /* LivpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70000000000000000000006 /* LivpParser.swift */; };
+		A90000000000000000000018 /* libarchive.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7000000000000000000000A /* libarchive.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,9 @@
 		A90000000000000000000002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A90000000000000000000003 /* LivpImporter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LivpImporter.entitlements; sourceTree = "<group>"; };
 		A90000000000000000000004 /* LivpImporter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LivpImporter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90000000000000000000011 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		A90000000000000000000012 /* LivePhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePhotoItem.swift; sourceTree = "<group>"; };
+		A90000000000000000000013 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90000000000000000000018 /* libarchive.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +129,9 @@
 			children = (
 				A70000000000000000000001 /* AppDelegate.swift */,
 				A70000000000000000000002 /* main.swift */,
+				A90000000000000000000011 /* ContentViewController.swift */,
+				A90000000000000000000012 /* LivePhotoItem.swift */,
+				A90000000000000000000013 /* SidebarViewController.swift */,
 				A70000000000000000000003 /* Info.plist */,
 				A70000000000000000000004 /* LivePhotoQuickLook.entitlements */,
 			);
@@ -285,6 +297,10 @@
 			files = (
 				A80000000000000000000001 /* AppDelegate.swift in Sources */,
 				A80000000000000000000002 /* main.swift in Sources */,
+				A90000000000000000000014 /* ContentViewController.swift in Sources */,
+				A90000000000000000000015 /* LivePhotoItem.swift in Sources */,
+				A90000000000000000000016 /* SidebarViewController.swift in Sources */,
+				A90000000000000000000017 /* LivpParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoxiudimdim.LivePhotoQuickLook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PreviewExtension/PreviewExtension-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -401,6 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoxiudimdim.LivePhotoQuickLook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PreviewExtension/PreviewExtension-Bridging-Header.h";
 			};
 			name = Release;
 		};
