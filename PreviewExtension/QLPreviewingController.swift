@@ -17,7 +17,6 @@ final class QLPreviewingController: NSViewController, QuickLookUI.QLPreviewingCo
     private var didPlayToEndObserver: NSObjectProtocol?
 
     override func loadView() {
-        NSLog("[LPQL] loadView")
         let mainView = NSView(frame: .zero)
         view = mainView
 
@@ -59,16 +58,12 @@ final class QLPreviewingController: NSViewController, QuickLookUI.QLPreviewingCo
         at url: URL,
         completionHandler handler: @escaping (Error?) -> Void
     ) {
-        NSLog("[LPQL] preparePreviewOfFile: %@", url.path)
         resetResources()
 
         do {
             let resource = try LivpParser.parseLivp(fileURL: url)
             livpResource = resource
             imageView.image = NSImage(contentsOf: resource.coverURL)
-            NSLog("[LPQL] preview ready cover=%@ video=%@",
-                  resource.coverURL.lastPathComponent,
-                  resource.videoURL.lastPathComponent)
 
             let avPlayer = AVPlayer(url: resource.videoURL)
             player = avPlayer
@@ -86,13 +81,11 @@ final class QLPreviewingController: NSViewController, QuickLookUI.QLPreviewingCo
 
             handler(nil)
         } catch {
-            NSLog("[LPQL] preview error: %@", String(describing: error))
             handler(error)
         }
     }
 
     @objc private func togglePlay() {
-        NSLog("[LPQL] togglePlay")
         guard let player = player else { return }
         if player.rate > 0 {
             player.pause()
